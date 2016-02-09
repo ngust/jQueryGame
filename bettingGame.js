@@ -5,7 +5,10 @@ $(document).ready(function(){
     var userAnswer = "yes";
     var wager = 0;
     $(".money").text("You now have $" + bank + " dollars");
-
+    $('#reset').on('click', function() {
+        bank = 100;
+        $(".money").text("You now have $" + bank + " dollars");
+    })
 
 
     var compare = function(num, guess, wager) {
